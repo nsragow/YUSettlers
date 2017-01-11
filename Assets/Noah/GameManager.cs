@@ -1,5 +1,7 @@
 ﻿
-public class GameManager {
+using System.Collections.Generic;
 
+public class GameManager {
+    private List<Player> players;
 
 }
