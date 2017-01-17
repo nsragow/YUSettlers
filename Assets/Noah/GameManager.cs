@@ -7,11 +7,13 @@ public class GameManager {
     private int activePlayerIndex;
     private int victoryPointMax;
     private int currentLargestVPCount;
+    private IMap map;
 
     public GameManager(IGameSettings gS, List<IPlayer> pL)
     {
         players = pL;
         victoryPointMax = gS.getMaxVPs();
+        map = gS.generateMap();
     }
 
     public void startGame()
@@ -58,6 +60,6 @@ public class GameManager {
 
     private void processInstruction(EInstruction inst)
     {
-        throw new NotImplementedException();
+        InstructionProcessor.processInstruction(inst, map);
     }
 }
