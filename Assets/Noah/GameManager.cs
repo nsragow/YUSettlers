@@ -36,7 +36,7 @@ public class GameManager {
         IPlayer currentPlayer = players[activePlayerIndex];
         while (currentPlayer.takingTurn())
         {
-            EInstruction inst = currentPlayer.getNextInstruction();
+            Instruction inst = currentPlayer.getNextInstruction();
             processInstruction(inst);
             if (checkWinCondition()) break;
         }
@@ -58,8 +58,8 @@ public class GameManager {
         activePlayerIndex %= players.Count;
     }
 
-    private void processInstruction(EInstruction inst)
+    private void processInstruction(Instruction inst)
     {
-        InstructionProcessor.processInstruction(inst, map);
+        inst.processInstruction(map);
     }
 }

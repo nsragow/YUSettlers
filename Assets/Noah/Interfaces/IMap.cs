@@ -6,4 +6,5 @@ public interface IMap {
 
     int getHeight();
     int getWidth();
+    ITerrain getLocation(int x, int y);
 }
