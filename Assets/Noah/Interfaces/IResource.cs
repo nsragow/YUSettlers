@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IBuilding : IContainsImage
-{
-
+public interface IResource {
+    ResourceType getType();
+    int getCount();
+    
 }

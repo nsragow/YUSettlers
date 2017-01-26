@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IBuilding : IContainsImage
-{
-
-}
+public enum ResourceType {
+  Food, Metal, Wood, Brick  
+};
